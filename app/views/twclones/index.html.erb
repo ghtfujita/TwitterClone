@@ -6,6 +6,7 @@
 <% @twclones.each do |twclone| %>
   <tr>
     <td><%= twclone.content %></td>
+    <td><%= link_to 'edit tweet', edit_twclone_path(twclone.id) %></td>
   </tr>
 <% end %>
 </table>
