@@ -1,13 +1,2 @@
-<%= form_with(model: @twclone, local: true) do |form| %>
-  <% if @twclone.errors.any? %>
-    <h2><%= @twclone.errors.count %>件のエラーがあります。</h2><br>
-    <ul>
-      <% @twclone.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-      <% end %>
-    </ul>
-  <% end %>
-  <%= form.label :content %>
-  <%= form.text_field :content %><br>
-  <%= form.submit %>
-<% end %>
+<h2>Edit Tweet</h2>
+<%= render 'form' %>

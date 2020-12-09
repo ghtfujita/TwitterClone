@@ -1,0 +1,7 @@
+<h3>Confirm Tweet</h3>
+<%= form_with(model: @twclone, url: twclones_path, local:true) do |form| %>
+  <%= form.hidden_field :content %>
+  <p>Content: <%= @twclone.content %></p>
+  <%= form.submit 'Tweet' %>
+  <%= form.submit 'Back', name: 'back' %>
+<% end %>
