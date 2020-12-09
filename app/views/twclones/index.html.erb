@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twitter Clone - Rails Assignment</title>
+</head>
+<body>
 <h1>Tweet List</h1>
 <p><%= notice %></p>
 <table>
@@ -6,10 +14,12 @@
   </tr>
 <% @twclones.each do |twclone| %>
   <tr>
-    <td><%= twclone.content %></td>
-    <td><%= link_to 'edit tweet', edit_twclone_path(twclone.id) %></td>
-    <td><%= link_to 'delete tweet', twclone_path(twclone.id), method: :delete, data: { confirm: 'sure to delete tweet?'} %></td>
+    <td id='content'><%= twclone.content %></td>
+    <td id='link'><%= link_to 'edit tweet', edit_twclone_path(twclone.id) %></td>
+    <td id='link'><%= link_to 'delete tweet', twclone_path(twclone.id), method: :delete, data: { confirm: 'sure to delete tweet?'} %></td>
   </tr>
 <% end %>
 </table>
-<%= link_to 'create new tweet', new_twclone_path %>
+<div id='new'><%= link_to 'create new tweet', new_twclone_path %></div>
+</body>
+</html>
